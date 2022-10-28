@@ -28,6 +28,8 @@ colnames(df) <-n
 rownames(df) <-r
 df[21,] <-"1,1"
 
+write.table(df,"table_of_confidence_interval_of_correlation_coefficient.txt",sep="\t",quote = F)
+
 # draw plot
 for (k in 1:length(n)) {
  ci <-str_split(pattern = ",",df[,k],simplify = T)
